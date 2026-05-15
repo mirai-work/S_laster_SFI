@@ -750,7 +750,7 @@ class App:
                 pyxel.text(65, 128, "DEBUG MODE ACTIVE", 3)
             if pyxel.frame_count % 30 < 15:
                 pyxel.text(83, 95, "PRESS SPACE OR START ", 6)
-            pyxel.text(82, 140, "MIRAI WORK / M.T 2026", 7)
+             pyxel.text(72, 140, "(C)MIRAI WORK / M.T 2026", 7)
 
         elif self.state == "GAMEOVER":
             pyxel.text(int(W/2-28), int(H/2-5), "MISSION FAILED", 11)
