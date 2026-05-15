@@ -146,7 +146,7 @@ class App:
     
     def update(self):
         self.timer += 1
-        btn_start = pyxel.btnp(pyxel.KEY_SPACE) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_A)
+        btn_start = pyxel.btnp(pyxel.KEY_SPACE) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_START)
 
         if self.state == "TITLE":
             self.play_bgm(0)
@@ -440,7 +440,7 @@ class App:
         else: self.speed = 1.0
         self.pz += self.speed
         if self.timer > 1100:
-            if pyxel.btnp(pyxel.KEY_SPACE) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_A):
+            if pyxel.btnp(pyxel.KEY_SPACE) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_START):
                 self.reset(); self.state = "TITLE"
 
     def shoot_enemy_bullet(self, e, ox, oy):
@@ -749,7 +749,7 @@ class App:
                 pyxel.text(70, 120, "INVINCIBLE(U/D):", 7); pyxel.text(140, 120, f"[{inv_status}]", 11 if self.invincible else 13)
                 pyxel.text(65, 128, "DEBUG MODE ACTIVE", 3)
             if pyxel.frame_count % 30 < 15:
-                pyxel.text(73, 95, "PRESS [SPACE] OR BUTTON A", 6)
+                pyxel.text(73, 95, "PRESS SPACE OR START ", 6)
             pyxel.text(82, 140, "MIRAI WORK / M.T 2026", 7)
 
         elif self.state == "GAMEOVER":
@@ -823,7 +823,8 @@ class App:
             pyxel.rectb(int(W/2-55), 130, 110, 25, 7)
             pyxel.text(int(W/2-50), 135, f"FINAL SCORE: {self.score:07}", pyxel.frame_count % 16)
             if t > 1100:
-                pyxel.text(int(W/2-45), 145, "PRESS SPACE OR BUTTON A", 7)
+                pyxel.text(int(W/2-45), 145, "PRESS SPACE OR START", 7)
 
 # アプリの起動（クラスの外、一番左端に書く！）
 App()
+
