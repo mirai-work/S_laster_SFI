@@ -749,7 +749,7 @@ class App:
                 pyxel.text(70, 120, "INVINCIBLE(U/D):", 7); pyxel.text(140, 120, f"[{inv_status}]", 11 if self.invincible else 13)
                 pyxel.text(65, 128, "DEBUG MODE ACTIVE", 3)
             if pyxel.frame_count % 30 < 15:
-                pyxel.text(73, 95, "PRESS SPACE OR START ", 6)
+                pyxel.text(83, 95, "PRESS SPACE OR START ", 6)
             pyxel.text(82, 140, "MIRAI WORK / M.T 2026", 7)
 
         elif self.state == "GAMEOVER":
